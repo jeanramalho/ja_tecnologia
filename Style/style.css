@@ -54,3 +54,39 @@ body {
     width: 100%;
     margin: 30px 0;
 }
+
+.texto-animado {
+    position: relative;
+}
+
+.texto-animado::before {
+    content: "";
+    color: #fa781f;
+    animation: palavras 20s infinite;
+}
+
+.texto-animado::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #fa781f;
+    right: -10px;
+}
+
+@keyframes palavras {
+    0%,20% {
+        content: "Chaves Codificadas";
+    }
+    21%,40% {
+        content: "Rastreamento de Veículos";
+    }
+    41%,60% {
+        content: "Reparo em Módulos de Injeção";
+    }
+    61%,80% {
+        content: "Reparo em Painéis de Instrumentos";
+    }
+    81%,100% {
+        content: "Tecnologia Automotiva ";
+    }
+}
